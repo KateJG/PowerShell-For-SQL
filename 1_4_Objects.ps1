@@ -24,7 +24,7 @@ $datestring
 $datestring | gm
  
 #Everything is an object. This means more than just basic types:
-$file = New-Item -ItemType File -Path 'C:\Users\kate\OneDrive - rsmb.co.uk\Desktop\My_work_notes\SQL\junkfile.txt'
+$file = New-Item -ItemType File -Path 'C:\Users\'username'\OneDrive - 'hostname'\Desktop\My_work_notes\SQL\junkfile.txt'
 $file | gm
 
 $file.Name
