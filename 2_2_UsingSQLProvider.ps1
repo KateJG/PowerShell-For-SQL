@@ -6,7 +6,7 @@ cd SQLSERVER:\
 dir
 
 #Can browse our SQL Servers as if they were directories
-cd SQL\RSMB-JX7WQ9ONFS
+cd SQL\'hostname or instancename'
 dir
 
 CD DEFAULT
@@ -29,7 +29,7 @@ dir databases -Force | Select-Object name, createdate,@{name='DataSizeMB'; Expre
 dir databases\AdventureWorks2014\Tables
 
 #Practical use
-$instances = @('RSMB-JX7WQ9ONFS')
+$instances = @('hostname or instancename')
 
 #Check your databases for last backup
 $instances | ForEach-Object {Get-ChildItem "SQLSERVER:\SQL\$_\DEFAULT\Databases" -Force} |
