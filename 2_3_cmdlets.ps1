@@ -11,10 +11,10 @@ JOIN sys.databases d on (sp.sid = d.owner_sid)
 GROUP BY sp.name
 '@
 
-Invoke-Sqlcmd -ServerInstance RSMB-JX7WQ9ONFS -Database tempdb -Query $sql
+Invoke-Sqlcmd -ServerInstance 'your instance name' -Database tempdb -Query $sql
 
 #compare to sqlcmd
-$sqlcmdout = sqlcmd -S RSMB-JX7WQ9ONFS -d tempdb -Q $sql
+$sqlcmdout = sqlcmd -S 'your instance name' -d tempdb -Q $sql
 $invokesqlout = Invoke-Sqlcmd -ServerInstance RSMB-JX7WQ9ONFS -Database tempdb -Query $sql
 
 
