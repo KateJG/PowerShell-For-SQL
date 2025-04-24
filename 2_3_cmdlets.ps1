@@ -15,7 +15,7 @@ Invoke-Sqlcmd -ServerInstance 'your instance name' -Database tempdb -Query $sql
 
 #compare to sqlcmd
 $sqlcmdout = sqlcmd -S 'your instance name' -d tempdb -Q $sql
-$invokesqlout = Invoke-Sqlcmd -ServerInstance RSMB-JX7WQ9ONFS -Database tempdb -Query $sql
+$invokesqlout = Invoke-Sqlcmd -ServerInstance "hostname" -Database tempdb -Query $sql
 
 
 
